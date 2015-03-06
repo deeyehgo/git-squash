@@ -1,5 +1,5 @@
 /* jshint devel:true */
-(function(window, document, undefined) {
+(function(window, undefined) {
   console.log('\'Allo \'Allo!');
   var s = Snap();
   var c = s.circle(100,100,50);
@@ -15,8 +15,7 @@
   cc.attr({
     fill: '#0f5',
     id: 'te',
-    stroke: '#00f',
-    stokeLineCap:'round'
+    stroke: '#00f'
   });
   TweenMax.fromTo("#te", 1, {attr:{r:'0', 'stroke-width': 0}, transformOrigin:"center center"} ,{attr:{r:'1000', 'stroke-width': 1000},transformOrigin:"center center", ease:Power2.easeInOut, repeat: -1, yoyo: true});
 
@@ -29,4 +28,4 @@
     })
   });
   $(window).trigger('resize');
-})(window, document);
+})(window);
